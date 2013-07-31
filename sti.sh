@@ -16,7 +16,7 @@ function run
     && curl --silent H "Content-Type: text/xml; charset=utf-8" -H \
     "SOAPAction:" -w "Connect: %{time_connect} TTFB: %{time_starttransfer} \
     Total time: %{time_total}" -d @$REQUEST -X POST -L -D - \
-    $WSDL | awk '/Total time:/' | cut -d ' ' -f4 | tail -n 1 >> ../stats/$1 && sleep 2) ; done
+    $WSDL | awk '/Total time:/' | cut -d ' ' -f4 | tail -n 1 && sleep 2) ; done
 }
 
 function runFull
