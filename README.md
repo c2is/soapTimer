@@ -1,4 +1,4 @@
-soapStat
+soapTimer
 ========
 
 An very basic inline command's tool to check how long is a set of soap responses
